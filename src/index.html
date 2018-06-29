@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>书城</title>
+    <link rel="stylesheet" href="css/fonts2/iconfont.css">
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <img src="img/qiandao.png" alt="">
+            <div>
+                <span class="active">书城</span>
+                <span>书架</span>
+            </div>
+            <a href="page/login.html"><i class="icon iconfont icon-wode"></i></a>
+            
+        </header>
+        <main class="main">
+            <div class="content">
+                <!-- 书城 -->
+                <div class="book_city">
+                    <div>
+                        <div class="search_btn book_city_btn">
+                            <i class="icon iconfont icon-fangdajing"></i>
+                            <a href="page/search.html">输入书名/作者/关键字</a>
+                        </div>
+                        <div class="book_city_cont"></div>
+                    </div>
+                </div>
+                <!-- 书架 -->
+                <div class="book_self">
+                    <div class="search_btn book_self_search">
+                        <i class="icon iconfont icon-fangdajing"></i>
+                        <a href="javascript:;">输入书名/作者/关键字</a>
+                        <span class="book_self_btn active"><i class="icon iconfont icon-gengduo"></i></span>
+                    </div>
+                    <div class="book_self_cont bolck_list">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>
+<script src="js/lib/require.js"></script>
+<script>
+    require(['js/config'], function() {
+        require(['index'])
+    });
+</script>

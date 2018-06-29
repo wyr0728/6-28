@@ -1,0 +1,127 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: .14rem;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 625%;
+    -webkit-text-size-adjust: 100%;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+a {
+    color: #000;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+@mixin wenben($b:2) {
+    display: box;
+    display: -webkit-box;
+    word-break: break-all;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    line-clamp: $b;
+    -webkit-line-clamp: $b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin num($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin cir($c) {
+    width: $c;
+    height: $c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@mixin flex($f:space-between) {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: $f;
+    -webkit-justify-content: $f;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+%text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+body,
+html,
+.wrap {
+    @include num(100%, 100%);
+    overflow: hidden;
+}
+
+.content{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    h2{
+        font-size: .20rem;
+        border-bottom: 1px solid #000;
+    }
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 10;
+    >div{
+       width: 100%;
+       position: absolute;
+       background: rgba(0,0,0,0.6);
+       color: #fff;
+       left: 0;
+    }
+    .top{
+        top: 0;
+    }
+    .bottom{
+       bottom: 0;
+       height: .6rem;
+       .bot-top{
+           display: flex;
+           flex-direction: row;
+            p{  
+                width: 32%;
+                height: .3rem;
+                line-height: .3rem;
+                text-align: center;
+            }
+       }
+       ul{
+            display: flex;
+            flex-direction: row;
+            li{
+                width: 25%;
+                height: .3rem;
+                line-height: .3rem;
+                text-align: center;
+            }
+       }
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/fonts2/iconfont.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <script src="../js/lib/require.js"></script>
+    <script>
+        require(['../js/config'], function(){
+             require(['text1'])
+         })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="menu">
+           <div class="top">
+              <span>返回</span>
+           </div>
+           <div class="bottom">
+                <div class="config-box" style="display:none;">
+                        <div class="character">
+                            <h2>字体</h2>
+                            <button>大</button>
+                            <button>小</button>
+                        </div>
+                        <div class="color-box">
+                            <h2>背景</h2>
+                            <div class="bgcolor-cont"></div>
+                        </div>
+                    </div>
+                <div class="bot-top">
+                    <p class="prev-btn">上一章</p>
+                    <p><b class="cur">1</b>/<b class="sum"></b></p>
+                    <p class="next-btn">下一章</p>
+                </div>
+                <div class="bot-bottom">
+                    <ul>
+                            <li class="menu-btn"><b></b><span>目录</span></li>
+                            <li class="typeface"><b></b><span>字体</span></li>
+                            <li><b></b><span>夜间</span></li>
+                            <li><b></b><span>下载</span></li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+
+        </div>
+    </div>
+    <script class="text" type="text/x-handlebars-template">
+        <h2>{{t}}</h2>
+        {{#each p}}
+        <p>{{this}}</p>
+        {{/each}}
+    </script>
+
+    <script class="bgcolor" type="text/x-handlebars-template">
+        {{#each this}}
+        <b style="background: {{color}};"></b> {{/each}}
+    </script>
+</body>
+</html>
